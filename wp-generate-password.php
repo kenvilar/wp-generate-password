@@ -77,35 +77,3 @@ function wp_generapass_show_generated_password() {
 }
 
 add_action( 'admin_notices', 'wp_generapass_show_generated_password' );
-
-// Custom Taxonomy for Tutorial
-function wp_generapass_register_taxonomy_tutorial() {
-    /*
-     * either use [] or array() depending on your PHP version you're using.
-     * [] can be used when creating in JavaScript
-    */
-    $labels = array(
-        'name'              => _x( 'Tutorials', 'taxonomy general name', 'wp-generate-password' ),
-        'singular_name'     => _x( 'Tutorial', 'taxonomy singular name', 'wp-generate-password' ),
-        'search_items'      => __( 'Search Tutorials', 'wp-generate-password' ),
-        'all_items'         => __( 'All Tutorials', 'wp-generate-password' ),
-        'parent_item'       => __( 'Parent Tutorial', 'wp-generate-password' ),
-        'parent_item_colon' => __( 'Parent Tutorial:', 'wp-generate-password' ),
-        'edit_item'         => __( 'Edit Tutorial', 'wp-generate-password' ),
-        'update_item'       => __( 'Update Tutorial', 'wp-generate-password' ),
-        'add_new_item'      => __( 'Add New Tutorial', 'wp-generate-password' ),
-        'new_item_name'     => __( 'New Tutorial Name', 'wp-generate-password' ),
-        'menu_name'         => __( 'Tutorial', 'wp-generate-password' ),
-    );
-    $args = array(
-        'hierarchical'      => true,
-        'labels'            => $labels,
-        'show_ui'           => true,
-        'show_admin_column' => true,
-        'query_var'         => true,
-        'rewrite'           => array( 'slug' => 'wp-generapass-tutorial' ),
-    );
-    register_taxonomy( 'wp-generapass-tutorial', array( 'post' ), $args );
-}
-
-add_action( 'init', 'wp_generapass_register_taxonomy_tutorial' );
