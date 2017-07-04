@@ -1,5 +1,5 @@
 === WP Generate Password ===
-Contributors: Ken Vilar
+Contributors: kenvilar
 Donate link:
 Tags: wp-generate-password, wp, generate, password, random, generator, generated, pass, wordpress, plugin,
 Requires at least: 4.7
@@ -19,7 +19,6 @@ The plugin serves some features in the near future.
 * Github repository - https://github.com/kenvilar/wp-generate-password
 
 == Installation ==
-
 Install like any other plugin,
 
 1. Decompress the file
