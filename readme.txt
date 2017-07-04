@@ -1,5 +1,5 @@
 === WP Generate Password ===
-Contributors: kenvilar, ken.vilar
+Contributors: Ken Vilar
 Tags: wp-generate-password, wp, generate, password, generator, wordpress, plugin
 Tested up to: 4.8
 Stable tag:
@@ -34,3 +34,6 @@ Updates to the plugin will be posted here, to [Github repo](https://github.com/k
 == Screenshots ==
 
 == Changelog ==
+
+== Contributors ==
+@kenvilar

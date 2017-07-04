@@ -7,7 +7,7 @@
 [![Minimum PHP Version](https://img.shields.io/badge/php-%3E=%205.2-8892BF.svg)](https://php.net/)  
 [![License](https://img.shields.io/badge/license-GPL--2.0+-red.svg)](https://github.com/kenvilar/wp-generate-password/blob/master/LICENSE)
 
-Contributors: ken.vilar, kenvilar, Ken Vilar
+Contributors: Ken Vilar
 
 Donate link: 
 
@@ -63,7 +63,7 @@ If you find an issue, [let me know here](https://github.com/kenvilar/wp-generate
 
 ## Contributors
 
-@ken.vilar, @kenvilar
+Ken Vilar
 
 ## Frequently Asked Questions
 
