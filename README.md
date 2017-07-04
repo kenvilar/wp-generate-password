@@ -19,6 +19,17 @@ Tested up to: 4.8
 
 Stable tag:
 
+## Description
+This plugin generates password with a default length of 12.
+
+The plugin serves some of these features:
+
+### Done ###
+
+### ToDo ###
+* Users can use shortcode to every pages and posts
+* Users can choose the number of length of their password with a minimum of 8 and maximum of 16 characters
+
 ## Get Help
 
 Do you have questions about the WP Generate Password plugin? You can [send me an email](mailto:kenvilar@gmail.com) or [start a new thread in the WordPress.org support forums](https://wordpress.org/support/plugin/wp-generate-password#new-post).
