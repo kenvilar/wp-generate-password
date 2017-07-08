@@ -22,13 +22,9 @@ Stable tag:
 ## Description
 This plugin generates password with a default length of 12.
 
-The plugin serves some of these features:
-
-### Done ###
-
-### ToDo ###
-* Users can use shortcode to every pages and posts
-* Users can choose the number of length of their password with a minimum of 8 and maximum of 16 characters
+### Features ###
+* [ ] Users can use shortcode to every pages and posts
+* [ ] Users can choose the number of length of their password with a minimum of 8 and maximum of 16 characters
 
 ## Get Help
 

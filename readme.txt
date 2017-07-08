@@ -16,7 +16,7 @@ The plugin serves some features in the near future.
 
 = Developers =
 * If you are a developer and you want to put some extra filter or hooks for this plugin then let me know.
-* Github repository - https://github.com/kenvilar/wp-generate-password
+* Github repository - [https://github.com/kenvilar/wp-generate-password](https://github.com/kenvilar/wp-generate-password)
 
 == Installation ==
 Install like any other plugin,
