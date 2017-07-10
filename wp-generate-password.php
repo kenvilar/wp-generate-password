@@ -1,28 +1,33 @@
 <?php
 /*
-Plugin Name: WP Generate Password
-Plugin URI:  http://kenvilar.com/wp-generate-password/
-Description: A simple plugin that will generate password and displays at the top of every admin pages.
-Version:     1.0.0
-Author:      Ken Vilar
-Author URI:  http://kenvilar.com/
-Text Domain: wp-generate-password
-Domain Path: /languages
-License:     GPL2
+ * Plugin Name: WP Generate Password
+ * Plugin URI:  http://kenvilar.com/wp-generate-password/
+ * Description: A simple plugin that will generate password and displays at the top of every admin pages.
+ * Version:     1.0.0
+ * Author:      Ken Vilar
+ * Author URI:  http://kenvilar.com/
+ * Text Domain: wp-generate-password
+ * Domain Path: /languages
+ * License:     GPL2
+ *
+ * WP Generate Password is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 2 of the License, or
+ * any later version.
+ *
+ * WP Generate Password is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with WP Generate Password. If not, see https://www.gnu.org/licenses/gpl-2.0.html.
+ */
 
-WP Generate Password is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 2 of the License, or
-any later version.
-
-WP Generate Password is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with WP Generate Password. If not, see https://www.gnu.org/licenses/gpl-2.0.html.
-*/
+// Abort if this file is called directly
+if ( ! defined( 'WPINC' ) ) {
+    exit;
+}
 
 // This is the function where the password is generated
 if ( ! function_exists( 'wp_generapass_generate_password' ) ):
