@@ -37,11 +37,13 @@ function activate_wpgenerapass() {
     require_once plugin_dir_path( __FILE__ ) . 'includes/class-wpgenerapass-activator.php';
     WPGeneraPass_Activator::activate();
 }
+register_activation_hook( __FILE__, 'activate_wpgenerapass' );
 
 function deactivate_wpgenerapass() {
     require_once plugin_dir_path( __FILE__ ) . 'includes/class-wpgenerapass-deactivator.php';
     WPGeneraPass_Deactivator::deactivate();
 }
+register_deactivation_hook( __FILE__, 'deactivate_wpgenerapass' );
 
 // This is the function where the password is generated
 if ( ! function_exists( 'wp_generapass_generate_password' ) ):
