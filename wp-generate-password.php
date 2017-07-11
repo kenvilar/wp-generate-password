@@ -33,23 +33,31 @@ if ( ! defined( 'WPINC' ) ) {
     exit;
 }
 
+register_activation_hook( __FILE__, 'activate_wpgenerapass' );
+register_deactivation_hook( __FILE__, 'deactivate_wpgenerapass' );
+
 function activate_wpgenerapass() {
     require_once plugin_dir_path( __FILE__ ) . 'includes/class-wpgenerapass-activator.php';
     WPGeneraPass_Activator::activate();
 }
-register_activation_hook( __FILE__, 'activate_wpgenerapass' );
 
 function deactivate_wpgenerapass() {
     require_once plugin_dir_path( __FILE__ ) . 'includes/class-wpgenerapass-deactivator.php';
     WPGeneraPass_Deactivator::deactivate();
 }
-register_deactivation_hook( __FILE__, 'deactivate_wpgenerapass' );
 
 /*
  * This is the core plugin class used to define
- * main functions for the plugin capabilities
- * */
+ * main functions for the plugin capabilities.
+ */
 require plugin_dir_path( __FILE__ ) . 'includes/class-wpgenerapass.php';
+
+// This is where the plugin execute
+function run_wpgenerapass() {
+    $plugin = new WPGeneraPass();
+    $plugin->run();
+}
+run_wpgenerapass();
 
 // This is the function where the password is generated
 if ( ! function_exists( 'wp_generapass_generate_password' ) ):
