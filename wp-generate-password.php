@@ -38,6 +38,11 @@ function activate_wpgenerapass() {
     WPGeneraPass_Activator::activate();
 }
 
+function deactivate_wpgenerapass() {
+    require_once plugin_dir_path( __FILE__ ) . 'includes/class-wpgenerapass-deactivator.php';
+    WPGeneraPass_Deactivator::deactivate();
+}
+
 // This is the function where the password is generated
 if ( ! function_exists( 'wp_generapass_generate_password' ) ):
     function wp_generapass_generate_password( $extra_special_chars = false ) {
