@@ -45,6 +45,12 @@ function deactivate_wpgenerapass() {
 }
 register_deactivation_hook( __FILE__, 'deactivate_wpgenerapass' );
 
+/*
+ * This is the core plugin class used to define
+ * main functions for the plugin capabilities
+ * */
+require plugin_dir_path( __FILE__ ) . 'includes/class-wpgenerapass.php';
+
 // This is the function where the password is generated
 if ( ! function_exists( 'wp_generapass_generate_password' ) ):
     function wp_generapass_generate_password( $extra_special_chars = false ) {
