@@ -4,7 +4,7 @@
  * The public-facing functionality of the plugin.
  *
  * @link       http://kenvilar.com
- * @since      1.0.0
+ * @since      1.1.0
  * @package    Wp_Generate_Password
  * @subpackage Wp_Generate_Password/public
  * @author     Ken Vilar <kenvilar@gmail.com>

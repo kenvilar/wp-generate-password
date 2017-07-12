@@ -9,7 +9,7 @@
  *      - public-facing site hooks.
  *
  * @link       http://kenvilar.com
- * @since      1.0.0
+ * @since      1.1.0
  * @package    Wp_Generate_Password
  * @subpackage Wp_Generate_Password/includes
  * @author     Ken Vilar <kenvilar@gmail.com>
@@ -24,7 +24,7 @@ class WPGeneraPass {
     // Core functionality
     public function __construct() {
         $this->plugin_name = 'wp-generate-password';    // Plugin Name
-        $this->version = '1.0.0';                       // Plugin Version
+        $this->version = '1.1.0';                       // Plugin Version
 
         $this->load_dependencies();                     // Load the dependencies
         $this->set_locale();                            // Define the locale

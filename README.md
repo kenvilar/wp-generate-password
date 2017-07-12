@@ -1,7 +1,7 @@
 # [WP Generate Password](https://wordpress.org/plugins/wp-generate-password/)
 [WP Generate Password](https://wordpress.org/plugins/wp-generate-password/) A simple wordpress plugin that will generate random password and displays at the top of every admin pages.
 
-![Plugin Version](https://img.shields.io/badge/plugin-v1.0.0-blue.svg) 
+![Plugin Version](https://img.shields.io/badge/plugin-v1.1.0-blue.svg) 
 ![Total Downloads](https://img.shields.io/badge/downloads-less%20than%2010-brightgreen.svg)
 ![WordPress Compatibility](https://img.shields.io/badge/wordpress-4.8.0%20tested-brightgreen.svg)
 [![Minimum PHP Version](https://img.shields.io/badge/php-%3E=%205.2-8892BF.svg)](https://php.net/)  
