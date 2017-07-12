@@ -38,4 +38,60 @@ class WPGeneraPass_Admin {
         );
     }
 
+    /*
+     * Start generate password
+     */
+    // This is the function where the password is generated
+    private function wpgenerapass_generate_password( $extra_special_chars = false ) {
+        $chars  = 'abcdefghijklmnopqrstuvwxyz';
+        $chars .= 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        $chars .= '0123456789';
+        $chars .= '!@#$%^&*()';
+
+        if ( $extra_special_chars ):
+            $chars .= '-_ []{}<>~`+=,.;:/?|';
+        endif;
+
+        $wpgenerapass_password = ''; // Initialize the password string
+        $password_length = 12;
+        for ( $i = 0; $i < $password_length; $i += 1 ) {
+            $wpgenerapass_password .= substr( $chars, wp_rand( 0, strlen( $chars ) - 1 ), 1 );
+        }
+
+        return apply_filters( 'random_password', $wpgenerapass_password );
+    }
+
+    public function wpgenerapass_style_password() {
+        $wpgenerapass_is_rtl = function_exists( 'is_rtl' ) && is_rtl() ? 'left' : 'right';
+        echo "
+        <style>
+        .wpgenerapass-show-password {
+            float: $wpgenerapass_is_rtl;
+            font-size: 11px;
+            margin: 0;
+            padding-top: 5px;
+            padding-$wpgenerapass_is_rtl: 15px;
+        }
+        </style>
+        ";
+    }
+
+    public function wpgenerapass_show_generated_password() {
+        // Set the $inc_extra_special_chars to true if you want to include the extra special characters
+        $show_password = $this->wpgenerapass_generate_password( $inc_extra_special_chars = false );
+
+        // Do not use _e, just use __ when using printf or sprintf
+        printf(
+            __(
+                '<p class=\'wpgenerapass-show-password\'>Generated&nbsp;Password:&nbsp;<strong>%s</strong></p>',
+                'wp-generate-password'
+            ),
+            $show_password
+        );
+    }
+    /*
+     * End generate password
+     */
+
+
 }
