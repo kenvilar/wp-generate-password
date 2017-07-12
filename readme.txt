@@ -34,3 +34,7 @@ Updates to the plugin will be posted here, to [Github repo](https://github.com/k
 == Frequently Asked Questions ==
 
 == Changelog ==
+* Fix - Added conditional logic for directly access to the plugin
+* Fix - Move old generate password functions inside the admin class
+* Dev - Add class to leverage the OOP concepts
+* Dev - Organize plugin structure
