@@ -53,6 +53,13 @@ class WPGeneraPass {
         $this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
     }
 
+    private function define_public_hooks() {
+        $plugin_public = new WPGeneraPass_Public( $this->get_plugin_name(), $this->get_version() );
+
+        $this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
+        $this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
+    }
+
     public function run() {
         $this->loader->run();
     }
