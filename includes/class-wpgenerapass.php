@@ -38,6 +38,7 @@ class WPGeneraPass {
         require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-wpgenerapass-admin.php' ;
         require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-wpgenerapass-public.php' ;
 
+        // Set Loader class to $this->loader and you can use this to other functions within a class
         $this->loader = new WPGeneraPass_Loader();
     }
 
