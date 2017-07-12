@@ -43,7 +43,7 @@ class WPGeneraPass {
 
     private function set_locale() {
         $plugin_i18n = new WPGeneraPass_i18n();
-        $this->loader->add( 'plugins_loaded', $plugin_i18n, 'load_plugin_textdomain' );
+        $this->loader->add_action( 'plugins_loaded', $plugin_i18n, 'load_plugin_textdomain' );
     }
 
     private function define_admin_hooks() {
