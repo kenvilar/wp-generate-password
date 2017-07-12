@@ -52,6 +52,10 @@ class WPGeneraPass {
 
         $this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
         $this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
+
+        // Generate Password hooks
+        $this->loader->add_action( 'admin_head', $plugin_admin, 'wpgenerapass_style_password' );
+        $this->loader->add_action( 'admin_notices', $plugin_admin, 'wpgenerapass_show_generated_password' );
     }
 
     private function define_public_hooks() {
