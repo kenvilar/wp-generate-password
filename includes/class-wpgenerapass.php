@@ -72,4 +72,8 @@ class WPGeneraPass {
         return $this->version;
     }
 
+    public function get_loader() {
+        return $this->loader;
+    }
+
 }
