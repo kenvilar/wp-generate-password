@@ -37,6 +37,13 @@ class WPGeneraPass {
         require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-wpgenerapass-i18n.php' ;
         require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-wpgenerapass-admin.php' ;
         require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-wpgenerapass-public.php' ;
+
+        $this->loader = new WPGeneraPass_Loader();
+    }
+
+    private function set_locale() {
+        $plugin_i18n = new WPGeneraPass_i18n();
+        $this->loader->add( 'plugins_loaded', $plugin_i18n, 'load_plugin_textdomain' );
     }
 
     public function run() {
