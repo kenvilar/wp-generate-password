@@ -33,6 +33,11 @@ if ( ! defined( 'WPINC' ) ) {
     exit;
 }
 
+// Prevent any unauthorized access to your code
+if ( ! defined( 'ABSPATH' ) ) {
+    exit;
+}
+
 register_activation_hook( __FILE__, 'activate_wpgenerapass' );
 register_deactivation_hook( __FILE__, 'deactivate_wpgenerapass' );
 
