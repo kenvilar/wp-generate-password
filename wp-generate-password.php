@@ -38,24 +38,37 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
+define('WPGENERAPASS_NAME', 'wp-generate-password');
+define('WPGENERAPASS_VERSION', '1.1.0');
+
 register_activation_hook( __FILE__, 'activate_wpgenerapass' );
 register_deactivation_hook( __FILE__, 'deactivate_wpgenerapass' );
 
-function activate_wpgenerapass() {
-    require_once plugin_dir_path( __FILE__ ) . 'includes/class-wpgenerapass-activator.php';
-    WPGeneraPass_Activator::activate();
-}
+if ( ! function_exists( 'activate_wpgenerapass' ) ) :
+    function activate_wpgenerapass() {
+        if ( current_user_can( 'manage_options' ) ) :
+            require_once plugin_dir_path( __FILE__ ) . 'includes/class-wpgenerapass-activator.php';
+            WPGeneraPass_Activator::activate();
+        endif;
+    }
+endif;
 
-function deactivate_wpgenerapass() {
-    require_once plugin_dir_path( __FILE__ ) . 'includes/class-wpgenerapass-deactivator.php';
-    WPGeneraPass_Deactivator::deactivate();
-}
+if ( ! function_exists( 'deactivate_wpgenerapass' ) ) :
+    function deactivate_wpgenerapass() {
+        if ( current_user_can( 'manage_options' ) ) :
+            require_once plugin_dir_path( __FILE__ ) . 'includes/class-wpgenerapass-deactivator.php';
+            WPGeneraPass_Deactivator::deactivate();
+        endif;
+    }
+endif;
 
 /*
  * This is the core plugin class used to define
  * main functions for the plugin capabilities.
  */
-require plugin_dir_path( __FILE__ ) . 'includes/class-wpgenerapass.php';
+if ( file_exists( plugin_dir_path( __FILE__ ) . 'includes/class-wpgenerapass.php' ) ) :
+    require plugin_dir_path( __FILE__ ) . 'includes/class-wpgenerapass.php';
+endif;
 
 // This is where the plugin execute
 function run_wpgenerapass() {

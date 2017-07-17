@@ -23,8 +23,8 @@ class WPGeneraPass {
 
     // Core functionality
     public function __construct() {
-        $this->plugin_name = 'wp-generate-password';    // Plugin Name
-        $this->version = '1.1.0';                       // Plugin Version
+        $this->plugin_name  = WPGENERAPASS_NAME;        // Plugin Name
+        $this->version      = WPGENERAPASS_VERSION;     // Plugin Version
 
         $this->load_dependencies();                     // Load the dependencies
         $this->set_locale();                            // Define the locale
