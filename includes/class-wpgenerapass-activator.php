@@ -11,8 +11,6 @@
  */
 class WPGeneraPass_Activator {
 
-    public static function activate() {
-
-    }
+    public static function activate() {}
 
 }

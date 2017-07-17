@@ -11,8 +11,6 @@
  */
 class WPGeneraPass_Deactivator {
 
-    public static function deactivate() {
-
-    }
+    public static function deactivate() {}
 
 }
