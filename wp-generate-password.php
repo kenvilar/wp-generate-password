@@ -30,36 +30,36 @@
 
 // Abort if this file is called directly
 if ( ! defined( 'WPINC' ) ) {
-    exit;
+	exit;
 }
 
 // Prevent any unauthorized access to your code
 if ( ! defined( 'ABSPATH' ) ) {
-    exit;
+	exit;
 }
 
-define('WPGENERAPASS_NAME', 'wp-generate-password');
-define('WPGENERAPASS_VERSION', '1.1.0');
+define( 'WPGENERAPASS_NAME', 'wp-generate-password' );
+define( 'WPGENERAPASS_VERSION', '1.1.0' );
 
 register_activation_hook( __FILE__, 'activate_wpgenerapass' );
 register_deactivation_hook( __FILE__, 'deactivate_wpgenerapass' );
 
 if ( ! function_exists( 'activate_wpgenerapass' ) ) :
-    function activate_wpgenerapass() {
-        if ( current_user_can( 'manage_options' ) ) :
-            require_once plugin_dir_path( __FILE__ ) . 'includes/class-wpgenerapass-activator.php';
-            WPGeneraPass_Activator::activate();
-        endif;
-    }
+	function activate_wpgenerapass() {
+		if ( current_user_can( 'manage_options' ) ) :
+			require_once plugin_dir_path( __FILE__ ) . 'includes/class-wpgenerapass-activator.php';
+			WPGeneraPass_Activator::activate();
+		endif;
+	}
 endif;
 
 if ( ! function_exists( 'deactivate_wpgenerapass' ) ) :
-    function deactivate_wpgenerapass() {
-        if ( current_user_can( 'manage_options' ) ) :
-            require_once plugin_dir_path( __FILE__ ) . 'includes/class-wpgenerapass-deactivator.php';
-            WPGeneraPass_Deactivator::deactivate();
-        endif;
-    }
+	function deactivate_wpgenerapass() {
+		if ( current_user_can( 'manage_options' ) ) :
+			require_once plugin_dir_path( __FILE__ ) . 'includes/class-wpgenerapass-deactivator.php';
+			WPGeneraPass_Deactivator::deactivate();
+		endif;
+	}
 endif;
 
 /*
@@ -67,12 +67,13 @@ endif;
  * main functions for the plugin capabilities.
  */
 if ( file_exists( plugin_dir_path( __FILE__ ) . 'includes/class-wpgenerapass.php' ) ) :
-    require plugin_dir_path( __FILE__ ) . 'includes/class-wpgenerapass.php';
+	require plugin_dir_path( __FILE__ ) . 'includes/class-wpgenerapass.php';
 endif;
 
 // This is where the plugin execute
 function run_wpgenerapass() {
-    $plugin = new WPGeneraPass();
-    $plugin->run();
+	$plugin = new WPGeneraPass();
+	$plugin->run();
 }
+
 run_wpgenerapass();

@@ -1,12 +1,12 @@
-(function( $ ) {
-    'use strict';
+(function ( $ ) {
+	'use strict';
 
-    /**
-     *
-     * $( document ).ready(function() {
+	/**
+	 *
+	 * $( document ).ready(function() {
      *      // Put scripts here
      * });
-     *
-     */
+	 *
+	 */
 
 })( jQuery );

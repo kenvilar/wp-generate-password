@@ -10,13 +10,13 @@
  * @author     Ken Vilar <kenvilar@gmail.com>
  */
 class WPGeneraPass_i18n {
-
-    public function load_plugin_textdomain() {
-        load_plugin_textdomain(
-            'wp-generate-password',
-            false,
-            dirname( dirname( plugin_basename( __FILE__ ) ) ) . '/languages/'
-        );
-    }
-
+	
+	public function load_plugin_textdomain() {
+		load_plugin_textdomain(
+			'wp-generate-password',
+			false,
+			dirname( dirname( plugin_basename( __FILE__ ) ) ) . '/languages/'
+		);
+	}
+	
 }
