@@ -63,7 +63,7 @@ class WPGeneraPass_Admin {
 
     public function wpgenerapass_style_password() {
         $wpgenerapass_is_rtl = function_exists( 'is_rtl' ) && is_rtl() ? 'left' : 'right';
-        echo "<style>.wpgenerapass-show-password {float: $wpgenerapass_is_rtl;font-size: 11px;margin: 0;padding-top: 5px;padding-$wpgenerapass_is_rtl: 15px;}</style>";
+        echo '<style>.wpgenerapass-show-password{float:' . $wpgenerapass_is_rtl . ';padding-' . $wpgenerapass_is_rtl . ':15px;}</style>';
     }
 
     public function wpgenerapass_show_generated_password() {
@@ -74,7 +74,7 @@ class WPGeneraPass_Admin {
 	    	'p' => array(
 	    		'class' => array(),
 		    ),
-		    //'strong' => array(),
+		    'strong' => array(),
 	    );
 
         // Do not use _e, just use __ when using printf or sprintf
