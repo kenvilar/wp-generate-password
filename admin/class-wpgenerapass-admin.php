@@ -63,31 +63,33 @@ class WPGeneraPass_Admin {
 
     public function wpgenerapass_style_password() {
         $wpgenerapass_is_rtl = function_exists( 'is_rtl' ) && is_rtl() ? 'left' : 'right';
-        echo "
-        <style>
-        .wpgenerapass-show-password {
-            float: $wpgenerapass_is_rtl;
-            font-size: 11px;
-            margin: 0;
-            padding-top: 5px;
-            padding-$wpgenerapass_is_rtl: 15px;
-        }
-        </style>
-        ";
+        echo "<style>.wpgenerapass-show-password {float: $wpgenerapass_is_rtl;font-size: 11px;margin: 0;padding-top: 5px;padding-$wpgenerapass_is_rtl: 15px;}</style>";
     }
 
     public function wpgenerapass_show_generated_password() {
         // Set the $inc_extra_special_chars to true if you want to include the extra special characters
         $show_password = $this->wpgenerapass_generate_password( $inc_extra_special_chars = false );
+	
+	    $allowed_tags = array(
+	    	'p' => array(
+	    		'class' => array(),
+		    ),
+		    //'strong' => array(),
+	    );
 
         // Do not use _e, just use __ when using printf or sprintf
-        printf(
-            __(
-                '<p class=\'wpgenerapass-show-password\'>Generated&nbsp;Password:&nbsp;<strong>%s</strong></p>',
-                'wp-generate-password'
-            ),
-            $show_password
-        );
+	    if (function_exists('wp_kses')) {
+		    printf(
+			    __(
+				    wp_kses(
+					    '<p class="wpgenerapass-show-password">Generated Password: <strong>%s</strong></p>',
+					    $allowed_tags
+				    ),
+				    'wp-generate-password'
+			    ),
+			    $show_password
+		    );
+	    }
     }
     /*
      * End generate password
