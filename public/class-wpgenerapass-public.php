@@ -41,7 +41,21 @@ class WPGeneraPass_Public {
 	public function wpgenerapass_shortcode( $atts, $content = null ) {
 		
 		if ( ! isset( $atts[ 'number' ] ) ) {
-			return '<p class="shortocde-error">You must provide a number of characters for this shortcode to work. For example, [wpgenerapass number="16"]. This will generate 16 characters of password.</p>';
+			$display_att_num_error = 'You must provide a number of characters for this shortcode to work. ';
+			$display_att_num_error .= 'For example, [wpgenerapass number="16"]. ';
+			$display_att_num_error .= 'This will generate 16 characters of password.';
+			
+			return sprintf(
+				wp_kses(
+					__( '<p class="shortocde-error">%s</p>', 'wp-generate-password' ),
+					array(
+						'p' => array(
+							'class' => array(),
+						),
+					)
+				),
+				$display_att_num_error
+			);
 		}
 		
 		if ( ! isset( $atts[ 'special-chars' ] ) ) {
@@ -74,7 +88,7 @@ class WPGeneraPass_Public {
 		$display_wpgenerapass_shortcode = '<div class="display-public-wpgenerapass">';
 		
 		if ( ! empty( $content ) ) {
-			$display_wpgenerapass_shortcode .= '<span class="display-public-wpgenerapass-text">' . $content . ': </span>';
+			$display_wpgenerapass_shortcode .= '<span class="display-public-wpgenerapass-text">' . esc_html__( $content, 'wp-generate-password' ) . ': </span>';
 		}
 		
 		$display_wpgenerapass_shortcode .= '<span class="display-public-wpgenerapass-password-text">';
