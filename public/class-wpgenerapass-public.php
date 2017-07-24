@@ -47,7 +47,7 @@ class WPGeneraPass_Public {
 			
 			return sprintf(
 				wp_kses(
-					__( '<p class="shortocde-error">%s</p>', 'wp-generate-password' ),
+					__( '<p class="shortcode-error">%s</p>', 'wp-generate-password' ),
 					array(
 						'p' => array(
 							'class' => array(),
@@ -66,7 +66,7 @@ class WPGeneraPass_Public {
 			
 			return sprintf(
 				wp_kses(
-					__( '<p class="shortocde-error">%s</p>', 'wp-generate-password' ),
+					__( '<p class="shortcode-error">%s</p>', 'wp-generate-password' ),
 					array(
 						'p' => array(
 							'class' => array(),
