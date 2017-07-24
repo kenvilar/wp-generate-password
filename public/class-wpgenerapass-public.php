@@ -44,14 +44,14 @@ class WPGeneraPass_Public {
 			return '<p class="shortocde-error">You must provide a number of characters for this shortcode to work.</p>';
 		}
 		
-		if ( ! isset( $atts[ 'with-chars' ] ) ) {
+		if ( ! isset( $atts[ 'with-special-chars' ] ) ) {
 			return '<p class="shortocde-error">You must provide value of yes or no if you want to enable the special characters to incude in this shortcode.</p>';
 		}
 		
 		$atts = shortcode_atts(
 			array(
-				'num-chars'  => '16',
-				'with-chars' => 'yes',
+				'num-chars'          => '16',
+				'with-special-chars' => 'yes',
 			),
 			$atts,
 			'wpgenerapass'
