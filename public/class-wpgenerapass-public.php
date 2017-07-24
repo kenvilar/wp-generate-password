@@ -38,11 +38,11 @@ class WPGeneraPass_Public {
 		);
 	}
 	
-	function wpgenerapass_shortcode( $atts ) {
+	function wpgenerapass_shortcode( $atts, $content = null ) {
 		
 		$atts = shortcode_atts(
 			array(
-				'num-chars'   => '16',
+				'num-chars'  => '16',
 				'with-chars' => 'yes',
 			),
 			$atts,
