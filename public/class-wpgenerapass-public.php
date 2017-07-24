@@ -57,6 +57,7 @@ class WPGeneraPass_Public {
 			'wpgenerapass'
 		);
 		
+		$atts[ 'special-chars' ] === 'yes' ? true : false;
 		
 	}
 	
