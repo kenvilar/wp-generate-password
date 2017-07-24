@@ -73,11 +73,13 @@ class WPGeneraPass_Public {
 			$wpgenerapass_password .= '<span class="display-public-wpgenerapass-text">' . $content . ': </span>';
 		}
 		
+		$wpgenerapass_password .= '<span class="display-public-wpgenerapass-password-text">';
+		
 		for ( $i = 0; $i < $atts[ 'number' ]; $i++ ) {
 			$wpgenerapass_password .= substr( $chars, wp_rand( 0, strlen( $chars ) - 1 ), 1 );
 		}
 		
-		$wpgenerapass_password .= '</div>';
+		$wpgenerapass_password .= '</span></div>';
 		
 		return $wpgenerapass_password;
 	}
