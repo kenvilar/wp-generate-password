@@ -1,3 +1,10 @@
 /**
  * All of the CSS for your public-facing functionality
  */
+.display-public-wpgenerapass {
+	background: rgba(176, 188, 180, 0.35);
+	padding: 14px 20px;
+}
+.display-public-wpgenerapass-text {
+	/*Put your css here*/
+}
