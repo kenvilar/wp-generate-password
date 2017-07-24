@@ -59,7 +59,22 @@ class WPGeneraPass_Public {
 		}
 		
 		if ( ! isset( $atts[ 'special-chars' ] ) ) {
-			return '<p class="shortocde-error">You must provide a value of "yes" or "no" if you want to enable the special characters to include in this shortcode. For example, [wpgenerapass special-chars="yes"]. This will generate a password including special characters.</p>';
+			$display_special_chars_error = 'You must provide a value of "yes" or "no" if you want to enable the ';
+			$display_special_chars_error .= 'special characters to include in this shortcode. ';
+			$display_special_chars_error .= 'For example, [wpgenerapass special-chars="yes"]. ';
+			$display_special_chars_error .= 'This will generate a password including special characters.';
+			
+			return sprintf(
+				wp_kses(
+					__( '<p class="shortocde-error">%s</p>', 'wp-generate-password' ),
+					array(
+						'p' => array(
+							'class' => array(),
+						),
+					)
+				),
+				$display_special_chars_error
+			);
 		}
 		
 		$atts = shortcode_atts(
