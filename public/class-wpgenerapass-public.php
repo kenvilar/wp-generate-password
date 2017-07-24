@@ -50,12 +50,16 @@ class WPGeneraPass_Public {
 		
 		$atts = shortcode_atts(
 			array(
-				'number'        => '16',
+				'number'        => 16,
 				'special-chars' => 'yes',
 			),
 			$atts,
 			'wpgenerapass'
 		);
+		
+		if ( empty( $atts[ 'number' ] ) ) {
+			$atts[ 'number' ] = 16;
+		}
 		
 		$atts[ 'special-chars' ] === 'yes' ? true : false;
 		
@@ -63,7 +67,7 @@ class WPGeneraPass_Public {
 		$chars .= 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 		$chars .= '0123456789';
 		
-		if ( $atts[ 'special-chars' ] === 'yes' ) {
+		if ( $atts[ 'special-chars' ] === 'yes' || $atts[ 'special-chars' ] === '' ) {
 			$chars .= '!@#$%^&*()';
 		}
 		
