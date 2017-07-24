@@ -41,7 +41,7 @@ class WPGeneraPass_Public {
 	public function wpgenerapass_shortcode( $atts, $content = null ) {
 		
 		if ( ! isset( $atts[ 'number' ] ) ) {
-			return '<p class="shortocde-error">You must provide a number of characters for this shortcode to work.</p>';
+			return '<p class="shortocde-error">You must provide a number of characters for this shortcode to work. For example, [wpgenerapass number="16"]. This will generate 16 characters of password.</p>';
 		}
 		
 		if ( ! isset( $atts[ 'special-chars' ] ) ) {
