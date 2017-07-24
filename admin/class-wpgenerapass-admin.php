@@ -79,18 +79,16 @@ class WPGeneraPass_Admin {
 		);
 		
 		// Do not use _e, just use __ when using printf or sprintf
-		if ( function_exists( 'wp_kses' ) ) {
-			printf(
+		printf(
+			wp_kses(
 				__(
-					wp_kses(
-						'<p class="wpgenerapass-show-password">Generated Password: <strong>%s</strong></p>',
-						$allowed_tags
-					),
+					'<p class="wpgenerapass-show-password">Generated Password: <strong>%s</strong></p>',
 					'wp-generate-password'
 				),
-				$show_password
-			);
-		}
+				$allowed_tags
+			),
+			$show_password
+		);
 	}
 	/*
 	 * End generate password
