@@ -67,21 +67,21 @@ class WPGeneraPass_Public {
 			$chars .= '!@#$%^&*()';
 		}
 		
-		$wpgenerapass_password = '<div class="display-public-wpgenerapass">';
+		$display_wpgenerapass_shortcode = '<div class="display-public-wpgenerapass">';
 		
 		if ( ! empty( $content ) ) {
-			$wpgenerapass_password .= '<span class="display-public-wpgenerapass-text">' . $content . ': </span>';
+			$display_wpgenerapass_shortcode .= '<span class="display-public-wpgenerapass-text">' . $content . ': </span>';
 		}
 		
-		$wpgenerapass_password .= '<span class="display-public-wpgenerapass-password-text">';
+		$display_wpgenerapass_shortcode .= '<span class="display-public-wpgenerapass-password-text">';
 		
 		for ( $i = 0; $i < $atts[ 'number' ]; $i++ ) {
-			$wpgenerapass_password .= substr( $chars, wp_rand( 0, strlen( $chars ) - 1 ), 1 );
+			$display_wpgenerapass_shortcode .= substr( $chars, wp_rand( 0, strlen( $chars ) - 1 ), 1 );
 		}
 		
-		$wpgenerapass_password .= '</span></div>';
+		$display_wpgenerapass_shortcode .= '</span></div>';
 		
-		return $wpgenerapass_password;
+		return $display_wpgenerapass_shortcode;
 	}
 	
 }
