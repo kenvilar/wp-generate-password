@@ -45,7 +45,7 @@ class WPGeneraPass_Public {
 		}
 		
 		if ( ! isset( $atts[ 'special-chars' ] ) ) {
-			return '<p class="shortocde-error">You must provide value of yes or no if you want to enable the special characters to incude in this shortcode.</p>';
+			return '<p class="shortocde-error">You must provide a value of "yes" or "no" if you want to enable the special characters to include in this shortcode. For example, [wpgenerapass special-chars="yes"]. This will generate a password including special characters.</p>';
 		}
 		
 		$atts = shortcode_atts(
