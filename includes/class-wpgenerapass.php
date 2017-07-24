@@ -63,6 +63,9 @@ class WPGeneraPass {
 		
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
+		
+		// Add hook for WP Generated Password shortcode tag
+		add_shortcode( 'wpgenerapass', array( 'WPGeneraPass_Public', 'wpgenerapass_shortcode' ) );
 	}
 	
 	public function run() {
