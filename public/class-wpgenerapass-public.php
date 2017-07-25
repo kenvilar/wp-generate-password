@@ -40,7 +40,7 @@ class WPGeneraPass_Public {
 	
 	public function wpgenerapass_shortcode( $atts, $content = null ) {
 		
-		if ( ! isset( $atts[ 'number' ] ) && function_exists( 'wp_kses' ) ) {
+		if ( ! isset( $atts[ 'number' ] ) && function_exists( 'wp_kses' ) ) :
 			$display_att_num_error = 'You must provide a number of characters for this shortcode to work. ';
 			$display_att_num_error .= 'For example, [wpgenerapass number="16"]. ';
 			$display_att_num_error .= 'This will generate 16 characters of password.';
@@ -56,7 +56,17 @@ class WPGeneraPass_Public {
 				),
 				$display_att_num_error
 			);
-		}
+		elseif ( (int) $atts[ 'number' ] < 4 ) :
+			$display_att_num_error = 'Oops! You entered a number less than 4. ';
+			$display_att_num_error .= 'The minimum limit of the password characters is 4.';
+			
+			return $display_att_num_error;
+		elseif ( $atts[ 'number' ] > 100 ) :
+			$display_att_num_error = 'Oops! You entered a number greater than 100. ';
+			$display_att_num_error .= 'The maximum limit of the password characters is 100.';
+			
+			return $display_att_num_error;
+		endif;
 		
 		if ( ! isset( $atts[ 'special-chars' ] ) && function_exists( 'wp_kses' ) ) {
 			$display_special_chars_error = 'You must provide a value of "yes" or "no" if you want to enable the ';
