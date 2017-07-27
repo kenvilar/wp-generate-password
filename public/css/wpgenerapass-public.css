@@ -8,3 +8,6 @@
 .display-public-wpgenerapass-text {
 	/*Put your css here*/
 }
+.wpgenerapass-shortcode-error {
+	background-color: rgba(255, 0, 0, 0.14);
+}
