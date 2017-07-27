@@ -24,7 +24,8 @@ This plugin generates password with a default length of 12.
 
 ### Features ###
 * [x] Users can use shortcode to every pages and posts
-* [ ] Users can choose the number of length of their password with a minimum of 4 and maximum of 100 characters
+* [x] Users can choose the number of length of their password with a minimum of 4 and maximum of 100 characters
+* [ ] Users can choose if they want to include integers, big alphabetical letters, and special and advance characters or not.
 
 ## Get Help
 
