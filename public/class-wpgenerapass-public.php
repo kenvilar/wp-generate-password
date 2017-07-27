@@ -88,7 +88,7 @@ class WPGeneraPass_Public {
 			);
 		endif;
 		
-		if ( ! isset( $atts[ 'special-chars' ] ) && function_exists( 'wp_kses' ) ) {
+		if ( ! isset( $atts[ 'special-chars' ] ) && function_exists( 'wp_kses' ) ) :
 			$display_special_chars_error = 'You must provide a value of "yes" or "no" if you want to enable the ';
 			$display_special_chars_error .= 'special characters to include in this shortcode. ';
 			$display_special_chars_error .= 'For example, [wpgenerapass special-chars="yes"]. ';
@@ -105,7 +105,7 @@ class WPGeneraPass_Public {
 				),
 				$display_special_chars_error
 			);
-		}
+		endif;
 		
 		$atts = shortcode_atts(
 			array(
