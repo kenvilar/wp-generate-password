@@ -56,12 +56,12 @@ class WPGeneraPass_Public {
 				),
 				$display_att_num_error
 			);
-		elseif ( (int) $atts[ 'number' ] < 4 ) :
+		elseif ( (int) $atts[ 'number' ] < 4 && function_exists( 'wp_kses' ) ) :
 			$display_att_num_error = 'Oops! You entered a number less than 4. ';
 			$display_att_num_error .= 'The minimum limit of the password characters is 4.';
 			
 			return $display_att_num_error;
-		elseif ( $atts[ 'number' ] > 100 ) :
+		elseif ( $atts[ 'number' ] > 100 && function_exists( 'wp_kses' ) ) :
 			$display_att_num_error = 'Oops! You entered a number greater than 100. ';
 			$display_att_num_error .= 'The maximum limit of the password characters is 100.';
 			
