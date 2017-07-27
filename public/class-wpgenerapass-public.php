@@ -47,7 +47,7 @@ class WPGeneraPass_Public {
 			
 			return sprintf(
 				wp_kses(
-					__( '<p class="shortcode-error">%s</p>', 'wp-generate-password' ),
+					__( '<p class="wpgenerapass-shortcode-error">%s</p>', 'wp-generate-password' ),
 					array(
 						'p' => array(
 							'class' => array(),
@@ -58,11 +58,11 @@ class WPGeneraPass_Public {
 			);
 		elseif ( (int) $atts[ 'number' ] < 4 && function_exists( 'wp_kses' ) ) :
 			$display_att_num_error = 'Oops! You entered a number less than 4. ';
-			$display_att_num_error .= 'The minimum limit of the password characters is 4.';
+			$display_att_num_error .= 'The minimum limit of a password characters is 4.';
 			
 			return sprintf(
 				wp_kses(
-					__( '<p class="shortcode-error">%s</p>', 'wp-generate-password' ),
+					__( '<p class="wpgenerapass-shortcode-error">%s</p>', 'wp-generate-password' ),
 					array(
 						'p' => array(
 							'class' => array(),
@@ -73,11 +73,11 @@ class WPGeneraPass_Public {
 			);
 		elseif ( $atts[ 'number' ] > 100 && function_exists( 'wp_kses' ) ) :
 			$display_att_num_error = 'Oops! You entered a number greater than 100. ';
-			$display_att_num_error .= 'The maximum limit of the password characters is 100.';
+			$display_att_num_error .= 'The maximum limit of a password characters is 100.';
 			
 			return sprintf(
 				wp_kses(
-					__( '<p class="shortcode-error">%s</p>', 'wp-generate-password' ),
+					__( '<p class="wpgenerapass-shortcode-error">%s</p>', 'wp-generate-password' ),
 					array(
 						'p' => array(
 							'class' => array(),
@@ -96,7 +96,7 @@ class WPGeneraPass_Public {
 			
 			return sprintf(
 				wp_kses(
-					__( '<p class="shortcode-error">%s</p>', 'wp-generate-password' ),
+					__( '<p class="wpgenerapass-shortcode-error">%s</p>', 'wp-generate-password' ),
 					array(
 						'p' => array(
 							'class' => array(),
