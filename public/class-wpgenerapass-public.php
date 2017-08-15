@@ -49,8 +49,8 @@ class WPGeneraPass_Public {
 			'wpgenerapass'
 		);
 		
-		if ( "" === $atts[ 'number' ] ) {
-			$atts[ 'number' ] = 16;
+		if ( "" === $atts['number'] ) {
+			$atts['number'] = 16;
 		}
 		
 		$wpgenerapass_shortcode_error_allowed_tags = array(
@@ -59,7 +59,7 @@ class WPGeneraPass_Public {
 			),
 		);
 		
-		if ( (int) $atts[ 'number' ] < 4 && function_exists( 'wp_kses' ) ) :
+		if ( (int) $atts['number'] < 4 && function_exists( 'wp_kses' ) ) :
 			
 			$display_att_num_error = 'Oops! You entered a number less than 4. ';
 			$display_att_num_error .= 'The minimum limit of a password characters is 4.';
@@ -70,7 +70,7 @@ class WPGeneraPass_Public {
 			
 			return wp_kses( $display_att_num_error, $wpgenerapass_shortcode_error_allowed_tags );
 		
-		elseif ( $atts[ 'number' ] > 100 && function_exists( 'wp_kses' ) ) :
+		elseif ( $atts['number'] > 100 && function_exists( 'wp_kses' ) ) :
 			
 			$display_att_num_error = 'Oops! You entered a number greater than 100. ';
 			$display_att_num_error .= 'The maximum limit of a password characters is 100.';
@@ -87,7 +87,7 @@ class WPGeneraPass_Public {
 		$chars .= 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 		$chars .= '0123456789';
 		
-		if ( 'yes' === $atts[ 'special-chars' ] || "" === $atts[ 'special-chars' ] ) {
+		if ( 'yes' === $atts['special-chars'] || "" === $atts['special-chars'] ) {
 			$chars .= '!@#$%^&*()';
 		}
 		
@@ -101,7 +101,7 @@ class WPGeneraPass_Public {
 		$display_wpgenerapass_shortcode .= '<span class="display-public-wpgenerapass-password-text">';
 		
 		$charsStringLen = strlen( $chars ) - 1;
-		for ( $i = 0; $i < $atts[ 'number' ]; $i++ ) {
+		for ( $i = 0; $i < $atts['number']; $i++ ) {
 			$display_wpgenerapass_shortcode .= substr( $chars, wp_rand( 0, $charsStringLen ), 1 );
 		}
 		
