@@ -40,6 +40,10 @@ class WPGeneraPass_Public {
 	
 	public static function wpgenerapass_shortcode( $atts, $content = null ) {
 		
+		if ( ! isset( $atts[ 'number' ] ) || $atts[ 'number' ] === "" ) {
+			$atts[ 'number' ] = 16;
+		}
+		
 		if ( ! isset( $atts[ 'number' ] ) && function_exists( 'wp_kses' ) ) :
 			$display_att_num_error = 'You must provide a number of characters for this shortcode to work. ';
 			$display_att_num_error .= 'For example, [wpgenerapass number="16"]. ';
@@ -115,10 +119,6 @@ class WPGeneraPass_Public {
 			$atts,
 			'wpgenerapass'
 		);
-		
-		if ( empty( $atts[ 'number' ] ) ) {
-			$atts[ 'number' ] = 16;
-		}
 		
 		$atts[ 'special-chars' ] === 'yes' ? true : false;
 		
