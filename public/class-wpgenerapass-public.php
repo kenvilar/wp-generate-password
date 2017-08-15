@@ -49,7 +49,7 @@ class WPGeneraPass_Public {
 			'wpgenerapass'
 		);
 		
-		if ( $atts[ 'number' ] === "" ) {
+		if ( "" === $atts[ 'number' ] ) {
 			$atts[ 'number' ] = 16;
 		}
 		
