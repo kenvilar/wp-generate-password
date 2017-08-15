@@ -3,16 +3,18 @@ Contributors: kenvilar
 Donate link:
 Tags: wp-generate-password, wp, generate, password, random, generator, generated, pass, wordpress, plugin,
 Requires at least: 4.7
-Tested up to: 4.8
+Tested up to: 4.8.1
 Stable tag: 1.1.0
 License: GPLv2
 
 A simple wordpress plugin that will generate password and displays at the top of every admin pages.
 
 == Description ==
-This plugin generates random password with a default length of 12.
+This plugin generates random password with a default length of 16.
 
-The plugin serves some features in the near future.
+= Features =
+* Users can use shortcode to every pages and posts
+* Users can choose the number of length of their password with a minimum of 4 and maximum of 100 characters
 
 = Developers =
 * If you are a developer and you want to put some extra filter or hooks for this plugin then let me know.
