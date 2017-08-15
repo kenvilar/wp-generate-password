@@ -87,21 +87,22 @@ class WPGeneraPass_Public {
 		$chars .= 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 		$chars .= '0123456789';
 		
-		if ( $atts[ 'special-chars' ] === 'yes' || $atts[ 'special-chars' ] === '' ) {
+		if ( $atts[ 'special-chars' ] === 'yes' || $atts[ 'special-chars' ] === "" ) {
 			$chars .= '!@#$%^&*()';
 		}
 		
 		$display_wpgenerapass_shortcode = '<div class="display-public-wpgenerapass">';
 		
-		if ( ! empty( $content ) ) {
+		if ( isset( $content ) && $content !== "" ) {
 			$content                        = esc_html__( $content, 'wp-generate-password' );
 			$display_wpgenerapass_shortcode .= '<span class="display-public-wpgenerapass-text">' . $content . ': </span>';
 		}
 		
 		$display_wpgenerapass_shortcode .= '<span class="display-public-wpgenerapass-password-text">';
 		
+		$charsStringLen = strlen( $chars ) - 1;
 		for ( $i = 0; $i < $atts[ 'number' ]; $i++ ) {
-			$display_wpgenerapass_shortcode .= substr( $chars, wp_rand( 0, strlen( $chars ) - 1 ), 1 );
+			$display_wpgenerapass_shortcode .= substr( $chars, wp_rand( 0, $charsStringLen ), 1 );
 		}
 		
 		$display_wpgenerapass_shortcode .= '</span></div>';
