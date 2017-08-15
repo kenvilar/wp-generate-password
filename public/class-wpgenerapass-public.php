@@ -87,13 +87,13 @@ class WPGeneraPass_Public {
 		$chars .= 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 		$chars .= '0123456789';
 		
-		if ( $atts[ 'special-chars' ] === 'yes' || $atts[ 'special-chars' ] === "" ) {
+		if ( 'yes' === $atts[ 'special-chars' ] || "" === $atts[ 'special-chars' ] ) {
 			$chars .= '!@#$%^&*()';
 		}
 		
 		$display_wpgenerapass_shortcode = '<div class="display-public-wpgenerapass">';
 		
-		if ( isset( $content ) && $content !== "" ) {
+		if ( isset( $content ) && "" !== $content ) {
 			$content                        = esc_html__( $content, 'wp-generate-password' );
 			$display_wpgenerapass_shortcode .= '<span class="display-public-wpgenerapass-text">' . $content . ': </span>';
 		}
