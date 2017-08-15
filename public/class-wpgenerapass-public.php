@@ -38,7 +38,7 @@ class WPGeneraPass_Public {
 		);
 	}
 	
-	public function wpgenerapass_shortcode( $atts, $content = null ) {
+	public static function wpgenerapass_shortcode( $atts, $content = null ) {
 		
 		if ( ! isset( $atts[ 'number' ] ) && function_exists( 'wp_kses' ) ) :
 			$display_att_num_error = 'You must provide a number of characters for this shortcode to work. ';
