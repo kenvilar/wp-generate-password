@@ -50,3 +50,9 @@ Updates to the plugin will be posted here, to [Github repo](https://github.com/k
 * Improved conditional statements
 * Filtered content with only allowed html tags
 * Added and modified function to prevent script injections
+
+= 1.3.0 =
+* Fixed calling non-static method
+* Improved code benchmarking
+* Improved conditional statements
+* Fixed filters

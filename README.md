@@ -1,7 +1,7 @@
 # [WP Generate Password](https://wordpress.org/plugins/wp-generate-password/)
 [WP Generate Password](https://wordpress.org/plugins/wp-generate-password/) A simple wordpress plugin that will generate random password and displays at the top of every admin pages.
 
-![Plugin Version](https://img.shields.io/badge/plugin-v1.1.0-blue.svg) 
+![Plugin Version](https://img.shields.io/badge/plugin-v1.3.0-blue.svg) 
 ![Total Downloads](https://img.shields.io/badge/downloads-less%20than%2010-brightgreen.svg)
 ![WordPress Compatibility](https://img.shields.io/badge/wordpress-4.8.0%20tested-brightgreen.svg)
 [![Minimum PHP Version](https://img.shields.io/badge/php-%3E=%205.2-8892BF.svg)](https://php.net/)  
@@ -67,7 +67,22 @@ Ken Vilar
 ## Screenshots
 
 ## Changelog
-* Fix - Added conditional logic for directly access to the plugin
-* Fix - Move old generate password functions inside the admin class
-* Dev - Add class to leverage the OOP concepts
-* Dev - Organize plugin structure 
+= 1.1.0 =
+* Added conditional logic for directly access to the plugin
+* Moved old generate password functions inside the admin class
+* Added class to leverage the OOP concepts
+* Organized plugin structure
+
+= 1.2.0 =
+* Added shortcode for user to display on their public specific page/s and post/s
+* Added function for users to let them choose what number of generated password characters with a minimum of 4 and maximum of 100
+* Added some stylesheet classes for user's easy to customize
+* Improved conditional statements
+* Filtered content with only allowed html tags
+* Added and modified function to prevent script injections
+
+= 1.3.0 = 
+* Fixed calling non-static method
+* Improved code benchmarking
+* Improved conditional statements
+* Fixed filters
