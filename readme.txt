@@ -4,7 +4,7 @@ Donate link:
 Tags: wp-generate-password, wp, generate, password, random, generator, generated, pass, wordpress, plugin,
 Requires at least: 4.7
 Tested up to: 4.8.1
-Stable tag: 1.1.0
+Stable tag: 1.3.0
 License: GPLv2
 
 A simple wordpress plugin that will generate password and displays at the top of every admin pages.

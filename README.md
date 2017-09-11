@@ -17,7 +17,7 @@ Requires at least: 4.7
 
 Tested up to: 4.8.1
 
-Stable tag:
+Stable tag: 1.3.0
 
 ## Description
 This plugin generates password with a default length of 12.
