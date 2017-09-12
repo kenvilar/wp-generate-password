@@ -4,7 +4,7 @@
  * Fired when the plugin is uninstalled.
  *
  * @link       https://profiles.wordpress.org/kenvilar
- * @since      1.1.0
+ * @since      1.3.0
  * @package    Wp_Generate_Password
  */
 

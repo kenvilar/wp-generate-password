@@ -3,7 +3,7 @@
  * Plugin Name:     WP Generate Password
  * Plugin URI:      https://wordpress.org/plugins/wp-generate-password/
  * Description:     A simple plugin that will generate password and displays at the top of every admin pages.
- * Version:         1.1.0
+ * Version:         1.3.0
  * Author:          Ken Vilar
  * Author URI:      https://profiles.wordpress.org/kenvilar
  * Text Domain:     wp-generate-password
@@ -11,7 +11,7 @@
  * License:         GPL2
  *
  * @link            https://profiles.wordpress.org/kenvilar
- * @since           1.1.0
+ * @since           1.3.0
  * @package         Wp_Generate_Password
  *
  * WP Generate Password is free software: you can redistribute it and/or modify
@@ -39,7 +39,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 define( 'WPGENERAPASS_NAME', 'wp-generate-password' );
-define( 'WPGENERAPASS_VERSION', '1.1.0' );
+define( 'WPGENERAPASS_VERSION', '1.3.0' );
 
 register_activation_hook( __FILE__, 'activate_wpgenerapass' );
 register_deactivation_hook( __FILE__, 'deactivate_wpgenerapass' );
